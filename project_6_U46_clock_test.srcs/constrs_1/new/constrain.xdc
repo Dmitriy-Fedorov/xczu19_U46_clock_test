@@ -17,10 +17,10 @@ set_property IOSTANDARD DIFF_HSTL_I_12 [ get_ports "sys_clk_n" ]
 # ----------------------- FMC clocks (U46) -----------------------
 ## GTR_505_REFCL  OUT0
 #set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets -of [get_pins IBUFDS_inst/O]]
-set_property PACKAGE_PIN AC37 [ get_ports "clk_U46_0_p" ]
-set_property IOSTANDARD LVDS_25 [ get_ports "clk_U46_0_p" ]
-set_property PACKAGE_PIN AC38 [ get_ports "clk_U46_0_n" ]
-set_property IOSTANDARD LVDS_25 [ get_ports "clk_U46_0_n" ]
+#set_property PACKAGE_PIN AC37 [ get_ports "clk_U46_0_p" ]
+#set_property IOSTANDARD LVCMOS25 [ get_ports "clk_U46_0_p" ]
+#set_property PACKAGE_PIN AC38 [ get_ports "clk_U46_0_n" ]
+#set_property IOSTANDARD LVDS_33 [ get_ports "clk_U46_0_n" ]
 
 ## GTY_128_REFCLK   OUT2 *
 #set_property PACKAGE_PIN AA32 [ get_ports "clk_U46_2_p" ]
@@ -59,11 +59,11 @@ set_property IOSTANDARD LVDS_25 [ get_ports "clk_U46_0_n" ]
 #set_property IOSTANDARD LVDS [ get_ports "clk_U46_7_n" ]
 
 ## CLK_USER_P    OUT8
-#set_property PACKAGE_PIN D4 [ get_ports "clk_U46_8_p" ]
+set_property PACKAGE_PIN D4 [ get_ports "clk_U46_8_p" ]
 #set_property IOSTANDARD LVDS [ get_ports "clk_U46_8_p" ]
 #set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets -of [get_pins IBUFDS_inst/O]]
 
-#set_property PACKAGE_PIN D3 [ get_ports "clk_U46_8_n" ]
+set_property PACKAGE_PIN D3 [ get_ports "clk_U46_8_n" ]
 #set_property IOSTANDARD LVDS [ get_ports "clk_U46_8_n" ]
 
 # ----------------------- I2C (U53)-----------------------
