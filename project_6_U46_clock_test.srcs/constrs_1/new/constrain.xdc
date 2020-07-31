@@ -41,15 +41,15 @@ set_property IOSTANDARD DIFF_HSTL_I_12 [ get_ports "sys_clk_n" ]
 #set_property IOSTANDARD LVDS [ get_ports "clk_U46_4_n" ]
 
 ## GTH_229_REFCLK    OUT5
-set_property PACKAGE_PIN Y12 [ get_ports "clk_U46_5_p" ]
+#set_property PACKAGE_PIN Y12 [ get_ports "clk_U46_5_p" ]
 #set_property IOSTANDARD LVDS [ get_ports "clk_U46_5_p" ]
-set_property PACKAGE_PIN Y11 [ get_ports "clk_U46_5_n" ]
+#set_property PACKAGE_PIN Y11 [ get_ports "clk_U46_5_n" ]
 #set_property IOSTANDARD LVDS [ get_ports "clk_U46_5_n" ]
 
 ## GTH_231_REFCLK    OUT6
-#set_property PACKAGE_PIN T12 [ get_ports "clk_U46_6_p" ]
+set_property PACKAGE_PIN T12 [ get_ports "clk_U46_6_p" ]
 #set_property IOSTANDARD LVDS [ get_ports "clk_U46_6_p" ]
-#set_property PACKAGE_PIN T11 [ get_ports "clk_U46_6_n" ]
+set_property PACKAGE_PIN T11 [ get_ports "clk_U46_6_n" ]
 #set_property IOSTANDARD LVDS [ get_ports "clk_U46_6_n" ]
 
 ## GTY_129_REFCLK    OUT7 *

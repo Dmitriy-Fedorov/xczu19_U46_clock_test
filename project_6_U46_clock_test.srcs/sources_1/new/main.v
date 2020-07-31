@@ -5,8 +5,8 @@ module main(
     input wire sys_clk_n,
 //    input wire clk_U46_2_p,
 //    input wire clk_U46_2_n,
-    input wire clk_U46_5_p,
-    input wire clk_U46_5_n
+    input wire clk_U46_6_p,
+    input wire clk_U46_6_n
     );
 wire rst;
 wire clk_ddr4;
@@ -16,9 +16,9 @@ reg[7:0] count_1 = 8'b0;
 reg[7:0] count_2 = 8'b0;
 reg[7:0] count_3 = 8'b0;
 
-CLK_BUF_U46 #(.div(3'd7)) N7(
-    .clk_U46_p(clk_U46_5_p),
-    .clk_U46_n(clk_U46_5_n),
+CLK_BUF_U46 #(.div(3'd0)) N6(
+    .clk_U46_p(clk_U46_6_p),
+    .clk_U46_n(clk_U46_6_n),
     .O(clk_U46_1)
 );
 
