@@ -60,10 +60,12 @@ set_property IOSTANDARD DIFF_HSTL_I_12 [ get_ports "sys_clk_n" ]
 
 ## CLK_USER_P    OUT8
 set_property PACKAGE_PIN D4 [ get_ports "clk_U46_8_p" ]
+set_property IOSTANDARD DIFF_HSTL_I_12 [ get_ports "clk_U46_8_p" ]
 #set_property IOSTANDARD LVDS [ get_ports "clk_U46_8_p" ]
 #set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets -of [get_pins IBUFDS_inst/O]]
 
 set_property PACKAGE_PIN D3 [ get_ports "clk_U46_8_n" ]
+set_property IOSTANDARD DIFF_HSTL_I_12 [ get_ports "clk_U46_8_n" ]
 #set_property IOSTANDARD LVDS [ get_ports "clk_U46_8_n" ]
 
 # ----------------------- I2C (U53)-----------------------
