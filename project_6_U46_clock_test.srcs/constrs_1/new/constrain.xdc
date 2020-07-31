@@ -17,9 +17,9 @@ set_property IOSTANDARD DIFF_HSTL_I_12 [ get_ports "sys_clk_n" ]
 # ----------------------- FMC clocks (U46) -----------------------
 ## GTR_505_REFCL  OUT0
 #set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets -of [get_pins IBUFDS_inst/O]]
-#set_property PACKAGE_PIN AC37 [ get_ports "clk_U46_0_p" ]
+set_property PACKAGE_PIN AC37 [ get_ports "clk_U46_0_p" ]
 #set_property IOSTANDARD LVDS [ get_ports "clk_U46_0_p" ]
-#set_property PACKAGE_PIN AC38 [ get_ports "clk_U46_0_n" ]
+set_property PACKAGE_PIN AC38 [ get_ports "clk_U46_0_n" ]
 #set_property IOSTANDARD LVDS [ get_ports "clk_U46_0_n" ]
 
 ## GTY_128_REFCLK   OUT2 *
@@ -47,9 +47,9 @@ set_property IOSTANDARD DIFF_HSTL_I_12 [ get_ports "sys_clk_n" ]
 #set_property IOSTANDARD LVDS [ get_ports "clk_U46_5_n" ]
 
 ## GTH_231_REFCLK    OUT6
-set_property PACKAGE_PIN T12 [ get_ports "clk_U46_6_p" ]
+#set_property PACKAGE_PIN T12 [ get_ports "clk_U46_6_p" ]
 #set_property IOSTANDARD LVDS [ get_ports "clk_U46_6_p" ]
-set_property PACKAGE_PIN T11 [ get_ports "clk_U46_6_n" ]
+#set_property PACKAGE_PIN T11 [ get_ports "clk_U46_6_n" ]
 #set_property IOSTANDARD LVDS [ get_ports "clk_U46_6_n" ]
 
 ## GTY_129_REFCLK    OUT7 *
