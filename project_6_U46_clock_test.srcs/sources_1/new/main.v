@@ -5,10 +5,10 @@ module main(
     input wire sys_clk_n,
 //    input wire clk_U46_2_p,
 //    input wire clk_U46_2_n,
-    input wire clk_U46_4_p,
-    input wire clk_U46_4_n
+    input wire clk_U46_7_p,
+    input wire clk_U46_7_n
     );
-    
+wire rst;
 wire clk_ddr4;
 wire clk_U46_1;
 wire clk_U46_2;
@@ -16,9 +16,9 @@ reg[7:0] count_1 = 8'b0;
 reg[7:0] count_2 = 8'b0;
 reg[7:0] count_3 = 8'b0;
 
-CLK_BUF_U46 N4(
-    .clk_U46_p(clk_U46_4_p),
-    .clk_U46_n(clk_U46_4_n),
+CLK_BUF_U46 #(.div(3'd7)) N7(
+    .clk_U46_p(clk_U46_7_p),
+    .clk_U46_n(clk_U46_7_n),
     .O(clk_U46_1)
 );
 
@@ -72,17 +72,44 @@ ila_0 debug (
 	.probe5(count_3) 
 );
 
-always @(posedge clk_ddr4)
+vio_0 vio (
+  .clk(clk_ddr4),                // input wire clk
+  .probe_out0(rst)  // output wire [0 : 0] probe_out0
+);
+
+/* --------------------------------------------------------- */
+always @(posedge clk_ddr4, posedge rst)
 begin
-    count_1 <= count_1 + 1;
+    if (rst)
+    begin
+        count_1 <= 0;
+    end
+    else
+    begin
+        count_1 <= count_1 + 1;
+    end
 end
-always @(posedge clk_U46_1)
+always @(posedge clk_U46_1, posedge rst)
 begin
-    count_2 <= count_2 + 1;
+    if (rst)
+    begin
+        count_2 <= 0;
+    end
+    else
+    begin
+        count_2 <= count_2 + 1;
+    end
 end
-always @(posedge clk_U46_2)
+always @(posedge clk_U46_2, posedge rst)
 begin
-    count_3 <= count_3 + 1;
+    if (rst)
+    begin
+        count_3 <= 0;
+    end
+    else
+    begin
+        count_3 <= count_3 + 1;
+    end
 end
 
 endmodule
