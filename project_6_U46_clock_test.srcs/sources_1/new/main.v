@@ -23,15 +23,6 @@ reg[7:0] count_3 = 8'b0;
 //    .O(clk_U46_1)
 //);
 
-
-clk_wiz_0 instance_name
-   (
-    // Clock out ports
-    .clk_out1(clk_U46_1),     // output clk_out1
-   // Clock in ports
-    .clk_in1_p(clk_U46_8_p),    // input clk_in1_p
-    .clk_in1_n(clk_U46_8_n));    // input clk_in1_n
-
 //CLK_BUF_U46 N3(
 //    .clk_U46_p(clk_U46_3_p),
 //    .clk_U46_n(clk_U46_3_n),
@@ -56,12 +47,12 @@ IBUFDS #(.IBUF_LOW_PWR ("FALSE") ) ddr4 (
 //    .O(clk_U46)
 //);
 /* --------------------------------------------------------- */
-//IBUFDS #(.IBUF_LOW_PWR ("FALSE") ) IBUFDS_inst (
-//   .I  (clk_U46_p),
-//   .IB (clk_U46_n),
+IBUFDS IBUFDS_inst (
+   .I  (clk_U46_8_p),
+   .IB (clk_U46_8_n),
    
-//   .O  (clk_U46_i1)
-//);
+   .O  (clk_U46_1)
+);
 
 //BUFG BUFG_U46_8(
 //    .I(clk_U46_i1), 
